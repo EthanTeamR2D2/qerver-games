@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#101522">
+    <title>Qerver Arcade</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="games.js" defer></script>
+  </head>
+  <body>
+    <main class="app">
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="Qerver Arcade, accueil">
+          <span class="brand-mark" aria-hidden="true">Q</span>
+          <span>QERVER<span class="brand-light"> ARCADE</span></span>
+        </a>
+        <span class="online"><span class="online-dot"></span> PRÊT À JOUER</span>
+      </header>
+
+      <section id="home" class="home">
+        <div class="intro">
+          <p class="eyebrow">TROIS CLASSIQUES. ZÉRO TÉLÉCHARGEMENT.</p>
+          <h1>À toi de <span>jouer.</span></h1>
+          <p class="intro-copy">Choisis un jeu, lance une partie et vise le meilleur score.</p>
+        </div>
+
+        <div class="game-list">
+          <button class="game-card pong-card" data-game="pong">
+            <span class="card-icon" aria-hidden="true"><span class="pong-icon"></span></span>
+            <span class="card-copy">
+              <span class="card-number">01 / DUEL</span>
+              <span class="card-title">Pong</span>
+              <span class="card-description">Le face-à-face légendaire. À deux joueurs.</span>
+            </span>
+            <span class="card-arrow" aria-hidden="true">↗</span>
+          </button>
+          <button class="game-card tetris-card" data-game="tetris">
+            <span class="card-icon" aria-hidden="true"><span class="blocks-icon"><i></i><i></i><i></i><i></i></span></span>
+            <span class="card-copy">
+              <span class="card-number">02 / PUZZLE</span>
+              <span class="card-title">Tetris</span>
+              <span class="card-description">Empile les pièces, complète les lignes.</span>
+            </span>
+            <span class="card-arrow" aria-hidden="true">↗</span>
+          </button>
+          <button class="game-card snake-card" data-game="snake">
+            <span class="card-icon" aria-hidden="true"><span class="snake-icon">〰</span></span>
+            <span class="card-copy">
+              <span class="card-number">03 / ARCADE</span>
+              <span class="card-title">Snake</span>
+              <span class="card-description">Mange, grandis, mais ne te mords pas.</span>
+            </span>
+            <span class="card-arrow" aria-hidden="true">↗</span>
+          </button>
+        </div>
+
+        <footer class="home-footer">
+          <span>FAIT POUR LES PAUSES QUI DURENT</span>
+          <span>UTILISE LES FLÈCHES OU TON CLAVIER</span>
+        </footer>
+      </section>
+
+      <section id="arcade" class="arcade hidden" aria-live="polite">
+        <div class="arcade-heading">
+          <button id="back-button" class="text-button" type="button">← <span>Jeux</span></button>
+          <div class="game-heading">
+            <p id="game-kicker" class="eyebrow"></p>
+            <h1 id="game-title"></h1>
+          </div>
+          <div id="game-score" class="score-box" aria-live="polite"></div>
+        </div>
+
+        <div class="play-area">
+          <canvas id="game-canvas" width="800" height="500" aria-label="Zone de jeu"></canvas>
+        </div>
+
+        <div class="control-bar">
+          <p id="game-controls" class="controls"></p>
+          <div class="game-actions">
+            <button id="pause-button" class="action-button" type="button">Pause</button>
+            <button id="restart-button" class="action-button action-primary" type="button">Recommencer</button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
